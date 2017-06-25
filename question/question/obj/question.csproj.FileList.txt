@@ -1,0 +1,10 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\question.Properties.Resources.resources
+obj\Debug\question.csproj.GenerateResource.Cache
+obj\Debug\question.questionForm.resources
+obj\Debug\question.selectQuestionForm.resources
+bin\Debug\question.exe
+bin\Debug\question.pdb
+obj\Debug\question.exe
+obj\Debug\question.pdb
+obj\Debug\question.checkForm.resources

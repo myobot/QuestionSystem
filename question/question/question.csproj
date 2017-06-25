@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{387F09F7-E57A-482F-A4C6-DC58B20DCBF4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>question</RootNamespace>
+    <AssemblyName>question</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="delQuestionFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delQuestionFrom.Designer.cs">
+      <DependentUpon>delQuestionFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="backspace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backspace.Designer.cs">
+      <DependentUpon>backspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkForm1.Designer.cs">
+      <DependentUpon>checkForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dao\admindao.cs" />
+    <Compile Include="dao\countdao.cs" />
+    <Compile Include="dao\historydao.cs" />
+    <Compile Include="dao\questiondao.cs" />
+    <Compile Include="dao\scoredao.cs" />
+    <Compile Include="dao\userdao.cs" />
+    <Compile Include="History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionInfoForm.Designer.cs">
+      <DependentUpon>QuestionInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestPaperHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPaperHistory.Designer.cs">
+      <DependentUpon>TestPaperHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MysqlHelper.cs" />
+    <Compile Include="QuestionForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionForm1.Designer.cs">
+      <DependentUpon>QuestionForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestPaper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestPaper.Designer.cs">
+      <DependentUpon>TestPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateQuestionFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateQuestionFrom.Designer.cs">
+      <DependentUpon>UpdateQuestionFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserChooseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserChooseForm.Designer.cs">
+      <DependentUpon>UserChooseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vo\admin.cs" />
+    <Compile Include="DialogResult.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vo\count.cs" />
+    <Compile Include="vo\history.cs" />
+    <Compile Include="vo\question.cs" />
+    <Compile Include="vo\score.cs" />
+    <Compile Include="vo\user.cs" />
+    <EmbeddedResource Include="delQuestionFrom.resx">
+      <DependentUpon>delQuestionFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="backspace.resx">
+      <DependentUpon>backspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkForm1.resx">
+      <DependentUpon>checkForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionInfoForm.resx" />
+    <EmbeddedResource Include="TestPaperHistory.resx">
+      <DependentUpon>TestPaperHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionForm1.resx">
+      <DependentUpon>QuestionForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regist.resx">
+      <DependentUpon>Regist.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TestPaper.resx">
+      <DependentUpon>TestPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateQuestionFrom.resx">
+      <DependentUpon>UpdateQuestionFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserChooseForm.resx">
+      <DependentUpon>UserChooseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Regist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Regist.Designer.cs">
+      <DependentUpon>Regist.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\534f9dbf0e33f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ae51f3deb48f8c54365d170b30292df5e0fe7f0c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\关闭 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\类型.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\密码.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\用户名.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\重新输入密码.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\性别.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\班级.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\密保问题.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\班级 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\答案.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\答案 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\注册.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MINUS %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\最小化.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\最小化 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度2 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度3 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度4 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度5 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-上一题.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-下一题.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\检查.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\问卷.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度1 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度2 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度3 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度4 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课后作业_难度5 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-上一题 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-下一题 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\答题.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\历史.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
